@@ -1,0 +1,143 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #1d4ed8;
+    margin-bottom: 12px;
+}
+
+.container > p {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 12px;
+}
+
+th {
+    padding: 18px;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+}
+
+td {
+    padding: 30px 15px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    vertical-align: top;
+}
+
+td h2 {
+    font-size: 28px;
+    min-height: 70px;
+    overflow-wrap: anywhere;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 15px auto;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    padding: 12px 24px;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.refresh {
+    margin-top: 25px;
+    background: #16a34a;
+}
+
+.refresh:hover {
+    background: #15803d;
+}
+
+.correct {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    table {
+        border-spacing: 5px;
+    }
+
+    th, td {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+
+    td h2 {
+        font-size: 17px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+}
