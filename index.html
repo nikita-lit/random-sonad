@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajusrakenduste sõnavara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+    <h1>Hajusrakenduste sõnavara</h1>
+    <p>Kontrolli oma eesti ja vene keele teadmisi!</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Eesti - Vene</th>
+                <th>Vene - Eesti</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <h2 id="estonianWord">Sõna</h2>
+                    <input
+                        type="text"
+                        id="russianAnswer"
+                        placeholder="Sisesta venekeelne tõlge"
+                    >
+                    <button onclick="checkRussian()">
+                        Kontrolli
+                    </button>
+                    <p id="russianResult"></p>
+                </td>
+
+                <td>
+                    <h2 id="russianWord">Слово</h2>
+                    <input
+                        type="text"
+                        id="estonianAnswer"
+                        placeholder="Sisesta eestikeelne tõlge"
+                    >
+                    <button onclick="checkEstonian()">
+                        Kontrolli
+                    </button>
+                    <p id="estonianResult"></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="refresh" onclick="newWords()">
+        Uued sõnad
+    </button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
