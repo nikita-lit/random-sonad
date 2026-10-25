@@ -1,3 +1,4 @@
+// Massiiv sisaldab hajusrakenduste sõnavara eesti ja vene keeles
 const words = [
     { et: "server", ru: "сервер" },
     { et: "klient", ru: "клиент" },
@@ -21,18 +22,22 @@ const words = [
     { et: "veebirakendus", ru: "веб-приложение" }
 ];
 
+//Muutujad hoiavad hetkel kuvatavaid eesti- ja venekeelseid sõnapaare
 let currentET;
 let currentRU;
 
+// Funktsioon valib Math.random() abil massiivist juhusliku sõnapaari
 function randomWord() {
     const index = Math.floor(Math.random() * words.length);
     return words[index];
 }
 
 function newWords() {
+    // Uute sõnade genereerimisel uuendatakse mõlema tabeliveeru sisu
     currentET = randomWord();
     currentRU = randomWord();
 
+    //Sisestusväljad ja eelmised tulemused tühjendatakse uue ülesande alustamisel
     document.getElementById("estonianWord").textContent =
     currentET.et;
 
@@ -46,10 +51,12 @@ function newWords() {
     document.getElementById("estonianResult").textContent = "";
 }
 
+// Normaliseerimine eemaldab liigsed tühikud ning muudab teksti väiketähtedeks
 function normalize(text) {
     return text.trim().toLowerCase().replace(/\s+/g, " ");
 }
 
+// Venekeelse vastuse kontrollimisel võrreldakse kasutaja sisestust õige tõlkega.
 function checkRussian() {
     const answer = normalize(
         document.getElementById("russianAnswer").value
@@ -66,6 +73,7 @@ function checkRussian() {
     }
 }
 
+//Eestikeelse vastuse kontrollimisel kuvatakse õige või vale vastuse teade
 function checkEstonian() {
     const answer = normalize(
         document.getElementById("estonianAnswer").value
@@ -82,4 +90,5 @@ function checkEstonian() {
     }
 }
 
+// Lehe laadimisel genereeritakse automaatselt esimesed juhuslikud sõnad
 newWords();
